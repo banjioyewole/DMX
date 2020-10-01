@@ -22,6 +22,10 @@ public struct Channels {
         self.elements = [:]
     }
     
+    public init(elementDictionary: [UInt: Slot]) {
+        elements = elementDictionary
+    }
+    
     public init(count: Int) {
         precondition(count <= Channels.maxLength)
         assert(count >= 0)
